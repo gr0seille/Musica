@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/playlistTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/playlist_title"
+        android:textAllCaps="true"
+        android:textColor="#F6D6FF"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playlistLabel"
+        android:text="@string/playlist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="#F6D6FF"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playlistTitle" />
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/album"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:elevation="24dp"
+ android:layout_marginTop="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playlistLabel"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="24dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/album1" />
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/playingsongtitle"
+        android:text="@string/song_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="#343A55"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album" />
+
+    <TextView
+        android:id="@+id/playingsingername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:paddingTop="8dp"
+        android:fontFamily="@font/raleway"
+        android:textColor="#3E0D69"
+        android:text="@string/singer_name1"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playingsongtitle"/>
+<SeekBar
+    android:id="@+id/time"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="100"
+    android:maxHeight="3dp"
+    android:minHeight="3dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="45dp"
+    android:layout_marginEnd="45dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/playingsingername"
+    />
+
+
+    <TextView
+        android:id="@+id/timestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="#FFF"
+        android:textSize="10sp"
+        android:text="@string/timestart"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time"/>
+
+    <TextView
+        android:id="@+id/timeend"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="#FFF"
+        android:text="@string/timeend"
+        android:textSize="10sp"
+  android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time"/>
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="124dp"
+        android:src="@drawable/play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeend"/>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="@id/play"
+        app:layout_constraintTop_toTopOf="@id/play"
+        app:layout_constraintRight_toRightOf="@id/play"
+        android:layout_marginEnd="75dp"
+    />
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:src="@drawable/previous"
+        app:layout_constraintBottom_toBottomOf="@id/play"
+        app:layout_constraintTop_toTopOf="@id/play"
+        app:layout_constraintLeft_toLeftOf="@id/play"
+        android:layout_marginStart="75dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
