@@ -23,12 +23,12 @@
 
     <TextView
         android:id="@+id/playlistLabel"
-        android:text="@string/playlist_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway"
-        android:textColor="#F6D6FF"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/playlist_name"
+        android:textColor="#F6D6FF"
         android:textSize="14sp"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +42,7 @@
         android:id="@+id/album"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:elevation="24dp"
- android:layout_marginTop="36dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/playlistLabel"
@@ -60,14 +59,14 @@
 
 
     <TextView
-        android:id="@+id/playingsongtitle"
-        android:text="@string/song_name1"
+        android:id="@+id/playingSongTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway_bold"
-        android:textColor="#343A55"
-        android:textSize="20sp"
         android:layout_marginTop="27dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/song_name1"
+        android:textColor="@color/titleColor"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -75,86 +74,99 @@
         app:layout_constraintTop_toBottomOf="@id/album" />
 
     <TextView
-        android:id="@+id/playingsingername"
+        android:id="@+id/playingSingerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-android:paddingTop="8dp"
         android:fontFamily="@font/raleway"
-        android:textColor="#3E0D69"
+        android:paddingTop="8dp"
         android:text="@string/singer_name1"
+        android:textColor="#3E0D69"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/playingsongtitle"/>
-<SeekBar
-    android:id="@+id/time"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:max="100"
-    android:maxHeight="3dp"
-    android:minHeight="3dp"
-    android:layout_marginTop="30dp"
-    android:layout_marginStart="45dp"
-    android:layout_marginEnd="45dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/playingsingername"
-    />
+        app:layout_constraintTop_toBottomOf="@id/playingSongTitle" />
 
-
-    <TextView
-        android:id="@+id/timestart"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway"
-        android:textColor="#FFF"
-        android:textSize="10sp"
-        android:text="@string/timestart"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="@id/time"
-        app:layout_constraintTop_toBottomOf="@id/time"/>
-
-    <TextView
-        android:id="@+id/timeend"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway"
-        android:textColor="#FFF"
-        android:text="@string/timeend"
-        android:textSize="10sp"
-  android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="@id/time"
-        app:layout_constraintTop_toBottomOf="@id/time"/>
-
-    <ImageView
-        android:id="@+id/play"
-        android:layout_width="wrap_content"
-        android:layout_height="124dp"
-        android:src="@drawable/play"
+        android:layout_marginTop="30dp"
+        android:max="100"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/timeend"/>
+        app:layout_constraintTop_toBottomOf="@id/playingSingerName" />
+
+
+    <TextView
+        android:id="@+id/timeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/timestart"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <TextView
+        android:id="@+id/timeEnd"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/timeend"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/time" />
 
     <ImageView
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:src="@drawable/next"
-        app:layout_constraintBottom_toBottomOf="@id/play"
-        app:layout_constraintTop_toTopOf="@id/play"
-        app:layout_constraintRight_toRightOf="@id/play"
-        android:layout_marginEnd="75dp"
-    />
-    <ImageView
         android:id="@+id/previous"
-        android:layout_width="wrap_content"
+        android:layout_width="26dp"
         android:layout_height="26dp"
         android:src="@drawable/previous"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@id/play"
-        app:layout_constraintTop_toTopOf="@id/play"
-        app:layout_constraintLeft_toLeftOf="@id/play"
-        android:layout_marginStart="75dp"
-        />
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintRight_toLeftOf="@id/play"
+        app:layout_constraintTop_toBottomOf="@id/timeEnd"
+        app:layout_constraintTop_toTopOf="@id/play" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:src="@drawable/play"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/previous"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeEnd" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+
+        android:src="@drawable/next"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@id/play"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@id/timeEnd"
+        app:layout_constraintTop_toTopOf="@id/play" />
+
 
 </android.support.constraint.ConstraintLayout>

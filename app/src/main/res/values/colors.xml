@@ -2,7 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#92DFFA</color>
     <color name="violet">#7E32AE</color>
     <color name="darkviolet">#440D90</color>
+    <color name="progressStart">#D4F8FB</color>
+    <color name="progressEnd">#92DFFA</color>
+    <color name="progressBg">#fae713</color>
+    <color name="titleColor">#343A55</color>
+    <color name="lightGrey">#93A8B3</color>
 </resources>
