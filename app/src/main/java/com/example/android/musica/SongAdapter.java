@@ -37,6 +37,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
             viewHolder.songName = (TextView) convertView.findViewById(R.id.songName);
             viewHolder.artist = (TextView) convertView.findViewById(R.id.artist);
             viewHolder.album = (ImageView) convertView.findViewById(R.id.album);
+            viewHolder.songId = (TextView) convertView.findViewById(R.id.songId);
+
             convertView.setTag(viewHolder);
         }
 
@@ -44,9 +46,12 @@ public class SongAdapter extends ArrayAdapter<Song> {
         Song song = getItem(position);
 
         //we fill it with the correct data
+       // viewHolder.songId.setText(song.getSongId());
+        viewHolder.songId.setText(String.valueOf(song.getSongId()));
         viewHolder.songName.setText(song.getSongName());
         viewHolder.artist.setText(song.getArtist());
         viewHolder.album.setImageResource(song.getAlbum());
+
 
 
         //we send back the view to the adapter so that it could display it
@@ -59,5 +64,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
         public TextView songName;
         public TextView artist;
         public ImageView album;
+        public TextView songId;
     }
 }

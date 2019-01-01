@@ -6,16 +6,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
     <Button
-        android:id="@+id/startB"
+        android:id="@+id/launcher"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:onClick="launchPlayer"
-        android:text="Start"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:text="coucou"
+        android:onClick="openPlayerActivity"/>
+
 
     <ListView
         android:id="@+id/songList"
@@ -23,7 +20,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/startB" />
+        app:layout_constraintTop_toBottomOf="@id/launcher" />
 
 
 </android.support.constraint.ConstraintLayout>

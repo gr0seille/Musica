@@ -3,7 +3,7 @@ package com.example.android.musica;
 import android.content.res.Resources;
 
 public class Song {
-
+    private int songId;
     private float duration;
     private String songName;
     private String artist;
@@ -17,20 +17,28 @@ public class Song {
      * @param artist   is the name of the singer like "Disney"
      * @param duration is the duration of the song, like X minutes
      */
-    public Song(float duration, String songName, String artist, int album) {
+    public Song(int songId, float duration, String songName, String artist, int album) {
+        this.songId = songId;
         this.duration = duration;
         this.songName = songName;
         this.artist = artist;
         this.album = album;
-
     }
 
-    public int getAlbum() {
-        return album;
+    public int getSongId() {
+        return songId;
     }
 
-    public void setAlbum(int album) {
-        this.album = album;
+    public void setSongId(int songId) {
+        this.songId = songId;
+    }
+
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
     }
 
     public String getSongName() {
@@ -49,11 +57,11 @@ public class Song {
         this.artist = artist;
     }
 
-    public float getDuration() {
-        return duration;
+    public int getAlbum() {
+        return album;
     }
 
-    public void setDuration(float duration) {
-        this.duration = duration;
+    public void setAlbum(int album) {
+        this.album = album;
     }
 }
