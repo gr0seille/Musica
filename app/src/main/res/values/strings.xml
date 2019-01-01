@@ -7,5 +7,9 @@
     <string name="time_start">0:00</string>
     <string name="time_end">3:04</string>
     <string name="title_activity_playlist">PlaylistActivity</string>
+    <string name="artist_description">Today\’s French artist is a group called Therapie Taxi, a group of young adults whose sing the fever of post-adolescent life. With their addictive unbridled lyrics, in French, mixed with rock and electro music.
+        With the recent release of her debut album “Hit Sale”, what a descriptive title it is, the group is living a sweet moment. With an extensive tour ahead of themselves and a pretty good repercussion of their debut record, Therapie Taxi is building a promising career in France and part of Europe.
+        (https://vibesofsilence.com/introducing-therapie-taxi/)
+)</string>
 
 </resources>

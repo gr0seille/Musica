@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         mListView.setAdapter(adapter);
 
         //set the listener to launch the player
-        TextView playerLauncher ;
-        playerLauncher=(TextView) findViewById(R.id.launcher);
+        ImageView playerLauncher ;
+        playerLauncher=(ImageView) findViewById(R.id.launcher);
         playerLauncher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),PlayerActivity.class);
+                Intent i = new Intent(getApplicationContext(),ArtistActivity.class);
                 startActivity(i);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         artistLauncher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),ArtistActivity.class);
+                Intent i = new Intent(getApplicationContext(),PlayerActivity.class);
                 startActivity(i);
             }
         });
