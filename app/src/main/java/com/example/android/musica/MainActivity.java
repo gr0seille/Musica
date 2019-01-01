@@ -51,11 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Song> buildSongs(){
         List<Song> songs = new ArrayList<Song>();
-        songs.add(new Song(1,333, "Florent", "Mon premier tweet !", R.drawable.album1));
-        songs.add(new Song(2,333, "Kevin", "C'est ici que ça se passe !", R.drawable.album2));
-        songs.add(new Song(3,333, "Logan", "Que c'est beau...",R.drawable.album3));
-        songs.add(new Song(4,333, "Mathieu", "Il est quelle heure ??",R.drawable.album4));
-        songs.add(new Song(5,333, "Willy", "On y est presque",R.drawable.album1));
+        songs.add(new Song(1,333, "Hit sale", "Thérapie taxi", R.drawable.album1));
+        songs.add(new Song(2,333, "Aerials", "System of a down", R.drawable.album2));
+        songs.add(new Song(3,333, "Feel it still", "Portugal. The man",R.drawable.album3));
         return songs;
     }
 }
