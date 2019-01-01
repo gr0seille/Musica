@@ -15,7 +15,7 @@
         android:fontFamily="@font/raleway_light"
         android:text="@string/playlist_title"
         android:textAllCaps="true"
-        android:textColor="#F6D6FF"
+        android:textColor="#3E0D69"
         android:textSize="10sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,9 +28,8 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/raleway"
         android:text="@string/playlist_name"
-        android:textColor="#F6D6FF"
+        android:textColor="#280333"
         android:textSize="14sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -107,10 +106,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/raleway"
-        android:text="@string/timestart"
+        android:text="@string/time_start"
         android:textColor="#FFF"
         android:textSize="12sp"
-        app:layout_constraintRight_toRightOf="@id/time"
+        app:layout_constraintLeft_toLeftOf="@id/time"
         app:layout_constraintTop_toBottomOf="@id/time" />
 
     <TextView
@@ -120,10 +119,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/raleway"
-        android:text="@string/timeend"
+        android:text="@string/time_end"
         android:textColor="#FFF"
         android:textSize="12sp"
-        app:layout_constraintLeft_toLeftOf="@id/time"
+        app:layout_constraintRight_toRightOf="@id/time"
         app:layout_constraintTop_toBottomOf="@id/time" />
 
     <ImageView

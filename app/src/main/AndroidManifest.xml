@@ -21,7 +21,12 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".playerActivity"></activity>
+        <activity android:name=".PlayerActivity" />
+        <activity
+            android:name=".PlaylistActivity"
+            android:label="@string/title_activity_playlist"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ArtistActivity"></activity>
     </application>
 
 </manifest>
