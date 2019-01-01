@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
     private List<Song> buildSongs(){
